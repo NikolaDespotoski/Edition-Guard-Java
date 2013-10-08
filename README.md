@@ -13,7 +13,7 @@ EditionGuard.setSecret("yourKey");
 
 2. Create your request:
 
-Packaging request:
+[Packaging](http://www.editionguard.com/help#nav_link_7) request:
 <pre><code>PackagingRequest request = new PackagingRequest();
 request.setAuthor("Auth");
 request.setTitle("Title");
@@ -22,14 +22,14 @@ request.setPublisher("p");
 request.setFile(new File("path/to/your.pdf"));
 request.setResourceId(1111);</code></pre>
 
-Fullfilment request:
+[Fullfilment](http://www.editionguard.com/help#nav_link_5) request:
 <pre><code>FulfilmentRequest fr = new FulfilmentRequest();
 fr.setResourceId(responseData.getResource());
 fr.setTransactionId(Long.parseLong(request.getNonce()));</code></pre>
 
 3. Execute your request
  
-Executing packaging request:
+Executing Packaging request:
 
 <pre><code>try {
 PackagingResponse packResponse = EditionGuard.executePackagingRequest(request, new EditionGuardListener<PackagingResponse>(){
